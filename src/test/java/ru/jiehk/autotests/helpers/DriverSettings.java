@@ -22,7 +22,7 @@ public class DriverSettings {
         ));
 
         Configuration.browserCapabilities = capabilities;
-        Configuration.pageLoadTimeout=300000;
+//        Configuration.pageLoadTimeout=300000;
 
         ChromeOptions chromeOptions = new ChromeOptions();
 
