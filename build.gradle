@@ -7,9 +7,7 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.21.0",
-    selenideVersion = "6.14.0",
-    junitVersion = "5.9.3"
+def allureVersion = "2.21.0"
 
 allure {
     report {
@@ -27,33 +25,21 @@ allure {
 
 dependencies {
     testImplementation(
-            "org.aspectj:aspectjweaver:1.9.6",
-            "com.codeborne:selenide:$selenideVersion",
+            'com.codeborne:selenide:6.14.0',
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "org.assertj:assertj-core:3.19.0",
-            "org.slf4j:slf4j-simple:2.0.7",
-            "org.junit.jupiter:junit-jupiter:$junitVersion")
+            'com.github.javafaker:javafaker:1.0.2',
+            'org.junit.jupiter:junit-jupiter:5.9.3',
+            'org.slf4j:slf4j-simple:2.0.7'
+    )
 }
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 tasks.withType(Test) {
-    systemProperties(System.getProperties())
     useJUnitPlatform()
-
-    if (System.getProperty("threads") != null) {
-        systemProperties += [
-                'junit.jupiter.execution.parallel.enabled'                 : true,
-                'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
-                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
-                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
-        ]
-    }
+    systemProperties(System.getProperties())
 
     testLogging {
         lifecycle {
