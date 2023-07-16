@@ -24,6 +24,7 @@ public class DriverSettings {
         ));
 
         Configuration.browserCapabilities = capabilities;
+        Configuration.pageLoadStrategy = "eager";
 
         ChromeOptions chromeOptions = new ChromeOptions();
 
@@ -34,6 +35,5 @@ public class DriverSettings {
         chromeOptions.addArguments("--lang=en-en");
         chromeOptions.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
         chromeOptions.addArguments("disable-features=NetworkService");
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
     }
 }
