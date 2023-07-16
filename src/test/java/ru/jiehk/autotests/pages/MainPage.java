@@ -27,6 +27,7 @@ public class MainPage {
     }
 
     @Step("Проверяем отображение строки поиска")
+
     public MainPage searchBarDisplayingCheck() {
         searchBar.shouldBe(Condition.visible);
         return this;

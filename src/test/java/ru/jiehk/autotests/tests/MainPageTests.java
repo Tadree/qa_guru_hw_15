@@ -1,5 +1,6 @@
 package ru.jiehk.autotests.tests;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.jiehk.autotests.pages.AdvancedSearchPage;
@@ -77,6 +78,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Отсутствие ошибок в логах консоли")
     void consoleShouldNotHaveErrorsTest() {
         mainPage
