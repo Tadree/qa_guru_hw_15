@@ -24,10 +24,18 @@ public class DriverSettings {
         ));
 
         Configuration.browserCapabilities = capabilities;
-        Configuration.pageLoadStrategy = "eager";
 
         ChromeOptions chromeOptions = new ChromeOptions();
 
+        chromeOptions.addArguments("disable-browser-side-navigation");
+        chromeOptions.addArguments("disable-dev-shm-usage");
+        chromeOptions.addArguments("--disable-gpu");
+        chromeOptions.addArguments("--disable-infobars");
+        chromeOptions.addArguments("--single-process");
+        chromeOptions.addArguments("--disable-extensions");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("enable-automation");
+        chromeOptions.addArguments("--disable-browser-side-navigation");
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--disable-popup-blocking");

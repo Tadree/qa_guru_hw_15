@@ -16,7 +16,7 @@ public class SearchResultsPage {
 
     @Step("Проверяем открытие страницы результатов поиска")
     public SearchResultsPage openSearchResultsPageCheck(String searchRequest) {
-        vacanciesSearchHeader.shouldHave(text(("вакансии  «" + searchRequest + "»")));
+        vacanciesSearchHeader.shouldHave(text(("«" + searchRequest + "»")));
         vacancyResults.shouldBe(visible);
         return this;
     }
