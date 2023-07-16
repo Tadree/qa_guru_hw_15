@@ -18,7 +18,7 @@ public class MainPage {
             advancedSearchButton = $("[data-qa=advanced-search]"),
             searchSuggests = $(".suggest"),
             regionPopup = $("[data-qa=region-clarification]"),
-            searchBarTitle = $("[data-qa=bloko-header-3]");
+            searchBarTitle = $(".bloko-header-promo-3");
 
     @Step("Открываем главную страницу")
     public MainPage openMainPage() {

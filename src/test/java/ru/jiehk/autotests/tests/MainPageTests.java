@@ -60,13 +60,13 @@ public class MainPageTests extends TestBase {
                 .searchSuggestsCheck(SEARCHREQUEST);
     }
 
-//    @Test
-//    @DisplayName("Проверка заголовка строки поиска на главной странице")
-//    void searchBarTitleTest() {
-//        mainPage
-//                .openMainPage()
-//                .searchBarTitleCheck(SEARCHTITLE);
-//    }
+    @Test
+    @DisplayName("Проверка заголовка строки поиска на главной странице")
+    void searchBarTitleTest() {
+        mainPage
+                .openMainPage()
+                .searchBarTitleCheck(SEARCHTITLE);
+    }
 
     @Test
     @DisplayName("Отображение popup подтверждения региона на главной странице")
