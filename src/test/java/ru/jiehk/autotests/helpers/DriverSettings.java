@@ -25,6 +25,7 @@ public class DriverSettings {
 
         ChromeOptions chromeOptions = new ChromeOptions();
 
+        chromeOptions.addArguments("--dns-prefetch-disable");
         chromeOptions.addArguments("disable-browser-side-navigation");
         chromeOptions.addArguments("disable-dev-shm-usage");
         chromeOptions.addArguments("--disable-gpu");
@@ -40,7 +41,7 @@ public class DriverSettings {
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--lang=en-en");
         chromeOptions.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
-        chromeOptions.addArguments("disable-features=NetworkService");
+        chromeOptions.addArguments("enable-features=NetworkServiceInProcess");
         Configuration.pageLoadTimeout=10000;
     }
 }
