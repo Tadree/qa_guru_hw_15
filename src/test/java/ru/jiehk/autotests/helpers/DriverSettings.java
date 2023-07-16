@@ -1,5 +1,6 @@
 package ru.jiehk.autotests.helpers;
 
+import org.openqa.selenium.PageLoadStrategy;
 import ru.jiehk.autotests.config.Project;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -33,5 +34,6 @@ public class DriverSettings {
         chromeOptions.addArguments("--lang=en-en");
         chromeOptions.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
         chromeOptions.addArguments("disable-features=NetworkService");
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
     }
 }
