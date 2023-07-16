@@ -22,6 +22,7 @@ public class DriverSettings {
         ));
 
         Configuration.browserCapabilities = capabilities;
+        Configuration.pageLoadTimeout=300000;
 
         ChromeOptions chromeOptions = new ChromeOptions();
 
@@ -42,6 +43,5 @@ public class DriverSettings {
         chromeOptions.addArguments("--lang=en-en");
         chromeOptions.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
         chromeOptions.addArguments("enable-features=NetworkServiceInProcess");
-        Configuration.pageLoadTimeout=10000;
     }
 }
