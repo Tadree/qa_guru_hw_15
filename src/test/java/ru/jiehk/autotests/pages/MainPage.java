@@ -3,7 +3,7 @@ package ru.jiehk.autotests.pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import ru.jiehk.autotests.helpers.DriverUtils;
+import ru.jiehk.autotests.helpers.Attach;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
@@ -79,7 +79,7 @@ public class MainPage {
 
     @Step("Проверка отсутствия ошибок в консоле")
     public MainPage consoleErrorsCheck() {
-        String consoleLogs = DriverUtils.getConsoleLogs();
+        String consoleLogs = Attach.getConsoleLogs();
         String errorText = "SEVERE";
         assertThat(consoleLogs).doesNotContain(errorText);
         return this;
