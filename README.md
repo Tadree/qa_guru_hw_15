@@ -38,17 +38,13 @@ gradle clean test
 -Dbrowser=${BROWSER}
 -DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${BROWSER_SIZE}
--DbrowserMobileView="${BROWSER_MOBILE}"
 -DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
 -DvideoStorage=https://${VIDEO_STORAGE}/video/
--Dthreads=${THREADS}
 ```
 где: 
 
 - <code>BROWSER</code> – браузер, в котором будут выполняться тесты.
 - <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты.
 - <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты.
-- <code>BROWSER_MOBILE</code> - название мобильного устройства.
 - <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 - <code>VIDEO_STORAGE</code> - адрес удаленного сервера, по которому можно получить видео. 
-- <code>THREADS</code> - количество потоков.

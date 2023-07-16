@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.sun.tools.doclint.Entity.or;
 
 public class SearchResultsPage {
     private SelenideElement
@@ -15,7 +16,7 @@ public class SearchResultsPage {
 
     @Step("Проверяем открытие страницы результатов поиска")
     public SearchResultsPage openSearchResultsPageCheck(String searchRequest) {
-        vacanciesSearchHeader.shouldHave(text("вакансий  «" + searchRequest + "»"));
+        vacanciesSearchHeader.shouldHave(text(("вакансии  «" + searchRequest + "»")));
         vacancyResults.shouldBe(visible);
         return this;
     }

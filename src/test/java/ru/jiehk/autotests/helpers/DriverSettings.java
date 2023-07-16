@@ -25,6 +25,7 @@ public class DriverSettings {
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--lang=en-en");
         chromeOptions.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
+        chromeOptions.addArguments("disable-features=NetworkService");
 
         if (Project.isWebMobile()) { // for chrome only
             Map<String, Object> mobileDevice = new HashMap<>();

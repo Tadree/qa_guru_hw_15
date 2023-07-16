@@ -16,9 +16,9 @@ public class MainPage {
             searchBar = $("[data-qa=search-input]"),
             searchButton = $("[data-qa=search-button]"),
             advancedSearchButton = $("[data-qa=advanced-search]"),
-            searchSuggests = $("[data-qa=bloko-suggest-list]"),
+            searchSuggests = $(".suggest"),
             regionPopup = $("[data-qa=region-clarification]"),
-            searchBarTitle = $(".supernova-dashboard-search h3");
+            searchBarTitle = $("[data-qa=bloko-header-3]");
 
     @Step("Открываем главную страницу")
     public MainPage openMainPage() {
@@ -81,7 +81,6 @@ public class MainPage {
     public MainPage consoleErrorsCheck() {
         String consoleLogs = DriverUtils.getConsoleLogs();
         String errorText = "SEVERE";
-//        String errorText = "SEVERE";
         assertThat(consoleLogs).doesNotContain(errorText);
         return this;
     }
